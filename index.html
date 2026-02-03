@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baker Oyster III - March 7th, 2026</title>
+    <style>
+        @font-face {
+            font-family: 'Galley';
+            src: url('Galley.ttf') format('truetype');
+            font-weight: 500;
+        }
+        
+        @font-face {
+            font-family: 'Caslon Antique';
+            src: url('CaslonAntique.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Caslon Antique';
+            src: url('CaslonAntique-Bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Caslon Antique';
+            src: url('CaslonAntique-Italic.ttf') format('truetype');
+            font-weight: 400;
+            font-style: italic;
+        }
+        
+        @font-face {
+            font-family: 'Caslon Antique';
+            src: url('CaslonAntique-BoldItalic.ttf') format('truetype');
+            font-weight: 700;
+            font-style: italic;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: #0D0A08;
+        }
+
+        .scale-wrapper {
+            width: 2000px;
+            transform-origin: top left;
+        }
+
+        .rsvp-form {
+            width: 1500px;
+            margin-top: 60px;
+        }
+
+        .rsvp-form input,
+        .rsvp-form textarea {
+            width: 100%;
+            padding: 35px 45px;
+            margin-bottom: 50px;
+            font-size: 68px;
+            font-family: 'Caslon Antique', serif;
+            font-style: italic;
+            background: rgba(13, 10, 8, 0.7);
+            border: 3px solid #C7A144;
+            color: #C7A144;
+            outline: none;
+        }
+
+        .rsvp-form input::placeholder,
+        .rsvp-form textarea::placeholder {
+            color: rgba(199, 161, 68, 0.5);
+        }
+
+        .rsvp-form input:focus,
+        .rsvp-form textarea:focus {
+            border-color: #E8C969;
+            box-shadow: 0 0 30px rgba(199, 161, 68, 0.3);
+        }
+
+        .rsvp-form textarea {
+            min-height: 200px;
+            resize: vertical;
+        }
+
+        .rsvp-form button {
+            padding: 35px 100px;
+            font-size: 72px;
+            font-family: 'Galley', serif;
+            font-weight: 500;
+            background: transparent;
+            border: 3px solid #C7A144;
+            color: #C7A144;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .rsvp-form button:hover {
+            background: #C7A144;
+            color: #0D0A08;
+        }
+
+        .rsvp-form button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 40px;
+        }
+
+        .form-row input {
+            flex: 1;
+        }
+
+        .form-row input.small {
+            flex: 0 0 420px;
+        }
+
+        #formMessage {
+            font-size: 68px;
+            font-family: 'Caslon Antique', serif;
+            font-style: italic;
+            color: #C7A144;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* Hide number input spinners */
+        .rsvp-form input[type="number"]::-webkit-outer-spin-button,
+        .rsvp-form input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .rsvp-form input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+        /* Radio button styles */
+        .radio-group {
+            display: flex;
+            gap: 100px;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            font-size: 68px;
+            font-family: 'Caslon Antique', serif;
+            font-style: italic;
+            color: #C7A144;
+            cursor: pointer;
+        }
+
+        .radio-group input[type="radio"] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 60px;
+            height: 60px;
+            border: 3px solid #C7A144;
+            border-radius: 50%;
+            background: rgba(13, 10, 8, 0.7);
+            cursor: pointer;
+            margin: 0;
+            padding: 0;
+        }
+
+        .radio-group input[type="radio"]:checked {
+            background: #C7A144;
+            box-shadow: inset 0 0 0 10px #0D0A08;
+        }
+
+        .form-label {
+            font-size: 68px;
+            font-family: 'Caslon Antique', serif;
+            font-weight: 700;
+            color: #C7A144;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="scale-wrapper" id="scaleWrapper">
+    <div style="width: 2000px; height: 6700px; padding-left: 100px; padding-right: 100px; position: relative; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+        <img style="width: 2092px; height: 7000px; left: -46px; top: 0px; position: absolute; z-index: -1; object-fit: cover; object-position: top" src="background.jpg" />
+        <div style="align-self: stretch; height: 1600px; position: relative"></div>
+        <img style="width: 1022px; height: 669px" src="logo.png" />
+        <div style="align-self: stretch; height: 160px; position: relative"></div>
+        <div style="align-self: stretch; text-align: center; color: #C7A144; font-size: 75px; font-family: Galley; font-weight: 500; word-wrap: break-word; text-shadow: 0px 4px 50px rgba(0, 0, 0, 1.00)">A THIRD VOYAGE TO THE FROZEN SHORES</div>
+        <div style="align-self: stretch; height: 40px; position: relative"></div>
+        <div style="align-self: stretch; text-align: center"><span style="color: #C7A144; font-size: 119px; font-family: Galley; font-weight: 500; word-wrap: break-word; text-shadow: 0px 4px 50px rgba(0, 0, 0, 1.00)">SATURDAY, MARCH </span><span style="color: #C7A144; font-size: 119px; font-family: Galley; font-weight: 500; word-wrap: break-word; text-shadow: 0px 4px 50px rgba(0, 0, 0, 1.00)">7</span><span style="color: #C7A144; font-size: 105px; font-family: Galley; font-weight: 500; word-wrap: break-word; text-shadow: 0px 4px 50px rgba(0, 0, 0, 1.00)">th</span><span style="color: #C7A144; font-size: 119px; font-family: Galley; font-weight: 500; word-wrap: break-word; text-shadow: 0px 4px 50px rgba(0, 0, 0, 1.00)"> </span><span style="color: #C7A144; font-size: 119px; font-family: Galley; font-weight: 500; word-wrap: break-word; text-shadow: 0px 4px 50px rgba(0, 0, 0, 1.00)">2026</span></div>
+        <div style="align-self: stretch; height: 120px; position: relative"></div>
+        <div style="align-self: stretch"><span style="color: #C7A144; font-size: 71px; font-family: Caslon Antique; font-style: italic; font-weight: 700; word-wrap: break-word">The icy waters of New England beckon once again for Baker Oyster III. <br/></span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-style: italic; font-weight: 400; word-wrap: break-word">Join us for an evening of maritime merriment and mixed martial arts mayhem.<br/><br/>You are welcome to bring friends, as we will be serving:</span></div>
+        <div style="align-self: stretch; height: 50px; position: relative"></div>
+        <div style="width: 1540px"><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-style: italic; font-weight: 400; word-wrap: break-word">Fresh oysters from </span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-style: italic; font-weight: 700; word-wrap: break-word">Island Creek Oysters</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-style: italic; font-weight: 400; word-wrap: break-word"> in Duxbury, MA, along with a variety of accoutrements<br/>Other delicacies from the briny deep, including shrimp, caviar, and tinned fish<br/>Specially selected beer and wine pairings<br/>Admiralty-strength cocktails from the Baker Street Tiki Lab</span></div>
+        <div style="align-self: stretch; height: 50px; position: relative"></div>
+        <div style="align-self: stretch"><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 700; letter-spacing: 3.40px; word-wrap: break-word">7</span><span style="color: #C7A144; font-size: 51px; font-family: Caslon Antique; font-weight: 700; letter-spacing: 2.55px; word-wrap: break-word">PM</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 700; word-wrap: break-word"> </span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-style: italic; font-weight: 400; word-wrap: break-word">to</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 700; word-wrap: break-word"> </span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 700; letter-spacing: 3.40px; word-wrap: break-word">9</span><span style="color: #C7A144; font-size: 51px; font-family: Caslon Antique; font-weight: 700; letter-spacing: 2.55px; word-wrap: break-word">PM</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 700; word-wrap: break-word">:</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 400; word-wrap: break-word">  </span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-style: italic; font-weight: 400; word-wrap: break-word">Oysters & Cocktails</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 400; word-wrap: break-word">   </span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 700; letter-spacing: 3.40px; word-wrap: break-word">9</span><span style="color: #C7A144; font-size: 51px; font-family: Caslon Antique; font-weight: 700; letter-spacing: 2.55px; word-wrap: break-word">PM</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 700; word-wrap: break-word"> </span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-style: italic; font-weight: 400; word-wrap: break-word">to</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 700; word-wrap: break-word"> </span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 700; letter-spacing: 3.40px; word-wrap: break-word">1</span><span style="color: #C7A144; font-size: 51px; font-family: Caslon Antique; font-weight: 700; letter-spacing: 2.55px; word-wrap: break-word">AM</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 700; word-wrap: break-word">:</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 400; word-wrap: break-word">  </span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-style: italic; font-weight: 400; text-decoration: underline; word-wrap: break-word">UFC 326: Holloway vs. Oliviera 2</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-style: italic; font-weight: 400; word-wrap: break-word"> <br/></span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 400; word-wrap: break-word"><br/></span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 700; word-wrap: break-word">ADDRESS:</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 400; word-wrap: break-word"> </span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-style: italic; font-weight: 400; word-wrap: break-word">7301 Baker St. • Pittsburgh, PA<br/></span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 400; word-wrap: break-word"><br/></span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 700; word-wrap: break-word">ATTIRE:</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 400; word-wrap: break-word"> </span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-style: italic; font-weight: 400; word-wrap: break-word">Just a lil' fancy.<br/></span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 400; word-wrap: break-word"><br/></span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 700; word-wrap: break-word">NOTE:</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 400; word-wrap: break-word"> </span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-style: italic; font-weight: 400; word-wrap: break-word">In lieu of bringing any additional food or beverages, we are </span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-style: italic; font-weight: 400; text-decoration: underline; word-wrap: break-word">passing the digital hat</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-style: italic; font-weight: 400; word-wrap: break-word"> to help offset costs.</span></div>
+        <div style="align-self: stretch; height: 200px; position: relative"></div>
+        <div style="color: #C7A144; font-size: 128px; font-family: Galley; font-weight: 500; word-wrap: break-word">RSVP</div>
+
+        <form class="rsvp-form" id="rsvpForm">
+            <div class="form-label">WILL YOU BE JOINING US?</div>
+            <div class="radio-group">
+                <label><input type="radio" name="attending" value="Yes" required> Yes</label>
+                <label><input type="radio" name="attending" value="No"> No</label>
+            </div>
+            <div class="form-row">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="number" name="guests" placeholder="# of Guests" min="1" max="10" class="small" required>
+            </div>
+            <textarea name="message" placeholder="Any dietary restrictions or notes? (optional)"></textarea>
+            <div style="text-align: center;">
+                <button type="submit">Submit RSVP</button>
+            </div>
+            <div id="formMessage"></div>
+        </form>
+
+        <div style="align-self: stretch; height: 200px; position: relative"></div>
+    </div>
+    </div>
+    <script>
+        // Scaling function
+        function scaleContent() {
+            var wrapper = document.getElementById('scaleWrapper');
+            var maxWidth = 800;
+            var targetWidth = Math.min(window.innerWidth, maxWidth);
+            var scale = targetWidth / 2000;
+            wrapper.style.transform = 'scale(' + scale + ')';
+            document.body.style.height = (7000 * scale) + 'px';
+            // Center the scaled content
+            var scaledWidth = 2000 * scale;
+            var leftOffset = (window.innerWidth - scaledWidth) / 2;
+            wrapper.style.marginLeft = Math.max(0, leftOffset) + 'px';
+        }
+        scaleContent();
+        window.addEventListener('resize', scaleContent);
+
+        // Form submission
+        document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            var form = this;
+            var button = form.querySelector('button');
+            var messageDiv = document.getElementById('formMessage');
+
+            // Disable button and show loading state
+            button.disabled = true;
+            button.textContent = 'Sending...';
+            messageDiv.textContent = '';
+
+            // Collect form data
+            var attendingRadio = form.querySelector('input[name="attending"]:checked');
+            var formData = {
+                timestamp: new Date().toISOString(),
+                name: form.querySelector('input[name="name"]').value,
+                attending: attendingRadio ? attendingRadio.value : '',
+                guests: form.querySelector('input[name="guests"]').value,
+                message: form.querySelector('textarea[name="message"]').value
+            };
+
+            // REPLACE THIS URL with your Google Apps Script Web App URL
+            var scriptURL = 'https://script.google.com/macros/s/AKfycbz5Og_gP1ND1f3Idte_fJJuDk8mG27JQ7HeP_VFOg76C2L3byqM_30AB7_7o0veZ34mAQ/exec';
+
+            fetch(scriptURL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(function() {
+                // Success
+                messageDiv.textContent = 'Thank you! Your RSVP has been received.';
+                messageDiv.style.color = '#C7A144';
+                form.reset();
+                button.textContent = 'SUBMIT';
+                button.disabled = false;
+            })
+            .catch(function(error) {
+                // Error
+                messageDiv.textContent = 'Something went wrong. Please try again.';
+                messageDiv.style.color = '#ff6b6b';
+                button.textContent = 'SUBMIT';
+                button.disabled = false;
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>
