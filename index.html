@@ -176,11 +176,18 @@
             cursor: pointer;
             margin: 0;
             padding: 0;
+            position: relative;
+            flex-shrink: 0;
         }
 
         .radio-group input[type="radio"]:checked {
             background: #C7A144;
             box-shadow: inset 0 0 0 10px #0D0A08;
+        }
+
+        .radio-group input[type="radio"]:hover {
+            border-color: #E8C969;
+            box-shadow: 0 0 15px rgba(199, 161, 68, 0.3);
         }
 
         .form-label {
@@ -257,20 +264,33 @@
             var button = form.querySelector('button');
             var messageDiv = document.getElementById('formMessage');
 
+            // Collect form data
+            var attendingRadio = form.querySelector('input[name="attending"]:checked');
+            
+            // Validate attending field
+            if (!attendingRadio) {
+                messageDiv.textContent = 'Please select Yes or No for attendance.';
+                messageDiv.style.color = '#ff6b6b';
+                return;
+            }
+
             // Disable button and show loading state
             button.disabled = true;
             button.textContent = 'Sending...';
             messageDiv.textContent = '';
 
-            // Collect form data
-            var attendingRadio = form.querySelector('input[name="attending"]:checked');
+            console.log('Attending radio selected:', attendingRadio);
+            console.log('Attending value:', attendingRadio.value);
+            
             var formData = {
                 timestamp: new Date().toISOString(),
                 name: form.querySelector('input[name="name"]').value,
-                attending: attendingRadio ? attendingRadio.value : '',
+                attending: attendingRadio.value,
                 guests: form.querySelector('input[name="guests"]').value,
                 message: form.querySelector('textarea[name="message"]').value
             };
+            
+            console.log('Form data being sent:', formData);
 
             // REPLACE THIS URL with your Google Apps Script Web App URL
             var scriptURL = 'https://script.google.com/macros/s/AKfycbz5Og_gP1ND1f3Idte_fJJuDk8mG27JQ7HeP_VFOg76C2L3byqM_30AB7_7o0veZ34mAQ/exec';
