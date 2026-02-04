@@ -268,6 +268,22 @@
             text-decoration: underline;
         }
 
+        .body-text-list {
+            width: 1540px;
+            padding-left: 60px;
+        }
+
+        .body-text-list-item::before {
+            content: '';
+            display: inline-block;
+            width: 0.4em;
+            height: 0.4em;
+            background: #C7A144;
+            border-radius: 50%;
+            margin-right: 30px;
+            vertical-align: middle;
+        }
+
         /* Larger text on mobile */
         @media (max-width: 600px) {
             .body-text-regular {
@@ -332,7 +348,7 @@
         <div style="align-self: stretch; height: 120px; position: relative"></div>
         <div style="align-self: stretch" class="body-text"><span class="body-text-bold">The icy waters of New England beckon once again for Baker Oyster III. <br/></span><span class="body-text-regular">Join us for an evening of maritime merriment and mixed martial arts mayhem.<br/><br/>You are welcome to bring friends, as we will be serving:</span></div>
         <div style="align-self: stretch; height: 50px; position: relative"></div>
-        <div style="width: 1540px" class="body-text body-text-regular"><span>Fresh oysters from </span><span class="body-text-bold">Island Creek Oysters</span><span> in Duxbury, MA, along with a variety of accoutrements<br/>Other delicacies from the briny deep, including shrimp, caviar, and tinned fish<br/>Specially selected beer and wine pairings<br/>Admiralty-strength cocktails from the Baker Street Tiki Lab</span></div>
+        <div class="body-text body-text-regular body-text-list"><span class="body-text-list-item">Fresh oysters from </span><span class="body-text-bold">Island Creek Oysters</span><span> in Duxbury, MA, along with a variety of accoutrements<br/></span><span class="body-text-list-item">Other delicacies from the briny deep, including shrimp, caviar, and tinned fish<br/></span><span class="body-text-list-item">Specially selected beer and wine pairings<br/></span><span class="body-text-list-item">Admiralty-strength cocktails from the Baker Street Tiki Lab</span></div>
         <div style="align-self: stretch; height: 50px; position: relative"></div>
         <div class="body-text body-text-regular"><span class="body-text-time">7</span><span class="body-text-time-small">PM</span><span class="body-text-label"> </span><span>to</span><span class="body-text-label"> </span><span class="body-text-time">9</span><span class="body-text-time-small">PM</span><span class="body-text-label">:</span><span>  Oysters & Cocktails   </span><span class="body-text-time">9</span><span class="body-text-time-small">PM</span><span class="body-text-label"> </span><span>to</span><span class="body-text-label"> </span><span class="body-text-time">1</span><span class="body-text-time-small">AM</span><span class="body-text-label">:</span><span>  </span><span class="body-text-underline">UFC 326: Holloway vs. Oliviera 2</span><span> <br/><br/></span><span class="body-text-label">ADDRESS:</span><span> 7301 Baker St. • Pittsburgh, PA<br/><br/></span><span class="body-text-label">ATTIRE:</span><span> Just a lil' fancy.<br/><br/></span><span class="body-text-label">NOTE:</span><span> In lieu of bringing any additional food or beverages, we are </span><span class="body-text-underline">passing the digital hat</span><span> to help offset costs.</span></div>
         <div style="align-self: stretch; height: 200px; position: relative"></div>
