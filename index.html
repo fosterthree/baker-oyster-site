@@ -209,6 +209,7 @@
             word-wrap: break-word;
             text-shadow: 0px 4px 50px rgba(0, 0, 0, 1.00);
             white-space: nowrap;
+            letter-spacing: -0.02em;
         }
 
         .subtitle-small {
@@ -226,6 +227,7 @@
 
         /* Body text */
         .body-text {
+            align-self: stretch;
             color: #C7A144;
             font-family: 'Caslon Antique', serif;
             font-style: italic;
@@ -242,6 +244,30 @@
             font-weight: 700;
         }
 
+        .body-text-label {
+            font-size: 68px;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .body-text-time {
+            font-size: 68px;
+            font-weight: 700;
+            font-style: normal;
+            letter-spacing: 3.40px;
+        }
+
+        .body-text-time-small {
+            font-size: 51px;
+            font-weight: 700;
+            font-style: normal;
+            letter-spacing: 2.55px;
+        }
+
+        .body-text-underline {
+            text-decoration: underline;
+        }
+
         /* Larger text on mobile */
         @media (max-width: 600px) {
             .body-text-regular {
@@ -250,6 +276,18 @@
 
             .body-text-bold {
                 font-size: 88px;
+            }
+
+            .body-text-label {
+                font-size: 85px;
+            }
+
+            .body-text-time {
+                font-size: 85px;
+            }
+
+            .body-text-time-small {
+                font-size: 64px;
             }
             .rsvp-form input,
             .rsvp-form textarea {
@@ -294,9 +332,9 @@
         <div style="align-self: stretch; height: 120px; position: relative"></div>
         <div style="align-self: stretch" class="body-text"><span class="body-text-bold">The icy waters of New England beckon once again for Baker Oyster III. <br/></span><span class="body-text-regular">Join us for an evening of maritime merriment and mixed martial arts mayhem.<br/><br/>You are welcome to bring friends, as we will be serving:</span></div>
         <div style="align-self: stretch; height: 50px; position: relative"></div>
-        <div style="width: 1540px"><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-style: italic; font-weight: 400; word-wrap: break-word">Fresh oysters from </span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-style: italic; font-weight: 700; word-wrap: break-word">Island Creek Oysters</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-style: italic; font-weight: 400; word-wrap: break-word"> in Duxbury, MA, along with a variety of accoutrements<br/>Other delicacies from the briny deep, including shrimp, caviar, and tinned fish<br/>Specially selected beer and wine pairings<br/>Admiralty-strength cocktails from the Baker Street Tiki Lab</span></div>
+        <div style="width: 1540px" class="body-text body-text-regular"><span>Fresh oysters from </span><span class="body-text-bold">Island Creek Oysters</span><span> in Duxbury, MA, along with a variety of accoutrements<br/>Other delicacies from the briny deep, including shrimp, caviar, and tinned fish<br/>Specially selected beer and wine pairings<br/>Admiralty-strength cocktails from the Baker Street Tiki Lab</span></div>
         <div style="align-self: stretch; height: 50px; position: relative"></div>
-        <div style="align-self: stretch"><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 700; letter-spacing: 3.40px; word-wrap: break-word">7</span><span style="color: #C7A144; font-size: 51px; font-family: Caslon Antique; font-weight: 700; letter-spacing: 2.55px; word-wrap: break-word">PM</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 700; word-wrap: break-word"> </span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-style: italic; font-weight: 400; word-wrap: break-word">to</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 700; word-wrap: break-word"> </span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 700; letter-spacing: 3.40px; word-wrap: break-word">9</span><span style="color: #C7A144; font-size: 51px; font-family: Caslon Antique; font-weight: 700; letter-spacing: 2.55px; word-wrap: break-word">PM</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 700; word-wrap: break-word">:</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 400; word-wrap: break-word">  </span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-style: italic; font-weight: 400; word-wrap: break-word">Oysters & Cocktails</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 400; word-wrap: break-word">   </span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 700; letter-spacing: 3.40px; word-wrap: break-word">9</span><span style="color: #C7A144; font-size: 51px; font-family: Caslon Antique; font-weight: 700; letter-spacing: 2.55px; word-wrap: break-word">PM</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 700; word-wrap: break-word"> </span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-style: italic; font-weight: 400; word-wrap: break-word">to</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 700; word-wrap: break-word"> </span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 700; letter-spacing: 3.40px; word-wrap: break-word">1</span><span style="color: #C7A144; font-size: 51px; font-family: Caslon Antique; font-weight: 700; letter-spacing: 2.55px; word-wrap: break-word">AM</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 700; word-wrap: break-word">:</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 400; word-wrap: break-word">  </span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-style: italic; font-weight: 400; text-decoration: underline; word-wrap: break-word">UFC 326: Holloway vs. Oliviera 2</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-style: italic; font-weight: 400; word-wrap: break-word"> <br/></span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 400; word-wrap: break-word"><br/></span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 700; word-wrap: break-word">ADDRESS:</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 400; word-wrap: break-word"> </span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-style: italic; font-weight: 400; word-wrap: break-word">7301 Baker St. • Pittsburgh, PA<br/></span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 400; word-wrap: break-word"><br/></span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 700; word-wrap: break-word">ATTIRE:</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 400; word-wrap: break-word"> </span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-style: italic; font-weight: 400; word-wrap: break-word">Just a lil' fancy.<br/></span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 400; word-wrap: break-word"><br/></span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 700; word-wrap: break-word">NOTE:</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-weight: 400; word-wrap: break-word"> </span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-style: italic; font-weight: 400; word-wrap: break-word">In lieu of bringing any additional food or beverages, we are </span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-style: italic; font-weight: 400; text-decoration: underline; word-wrap: break-word">passing the digital hat</span><span style="color: #C7A144; font-size: 68px; font-family: Caslon Antique; font-style: italic; font-weight: 400; word-wrap: break-word"> to help offset costs.</span></div>
+        <div class="body-text body-text-regular"><span class="body-text-time">7</span><span class="body-text-time-small">PM</span><span class="body-text-label"> </span><span>to</span><span class="body-text-label"> </span><span class="body-text-time">9</span><span class="body-text-time-small">PM</span><span class="body-text-label">:</span><span>  Oysters & Cocktails   </span><span class="body-text-time">9</span><span class="body-text-time-small">PM</span><span class="body-text-label"> </span><span>to</span><span class="body-text-label"> </span><span class="body-text-time">1</span><span class="body-text-time-small">AM</span><span class="body-text-label">:</span><span>  </span><span class="body-text-underline">UFC 326: Holloway vs. Oliviera 2</span><span> <br/><br/></span><span class="body-text-label">ADDRESS:</span><span> 7301 Baker St. • Pittsburgh, PA<br/><br/></span><span class="body-text-label">ATTIRE:</span><span> Just a lil' fancy.<br/><br/></span><span class="body-text-label">NOTE:</span><span> In lieu of bringing any additional food or beverages, we are </span><span class="body-text-underline">passing the digital hat</span><span> to help offset costs.</span></div>
         <div style="align-self: stretch; height: 200px; position: relative"></div>
         <div style="color: #C7A144; font-size: 128px; font-family: Galley; font-weight: 500; word-wrap: break-word">RSVP</div>
 
