@@ -284,10 +284,17 @@
             vertical-align: 0.2em;
         }
 
+        /* Spacer above logo */
+        .logo-spacer {
+            align-self: stretch;
+            height: 1600px;
+            position: relative;
+        }
+
         /* Larger text on mobile */
         @media (max-width: 600px) {
-            .scale-wrapper {
-                padding-top: 300px; /* Mobile top padding - edit this value */
+            .logo-spacer {
+                height: 1700px; /* Mobile logo spacer - edit this value */
             }
 
             .body-text-regular {
@@ -343,7 +350,7 @@
     <div class="scale-wrapper" id="scaleWrapper">
     <div style="width: 2000px; height: 6700px; padding-left: 100px; padding-right: 100px; position: relative; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
         <img style="width: 2092px; height: 7000px; left: -46px; top: 0px; position: absolute; z-index: -1; object-fit: cover; object-position: top" src="background.jpg" />
-        <div style="align-self: stretch; height: 1600px; position: relative"></div>
+        <div class="logo-spacer"></div>
         <img style="width: 1022px; height: 669px" src="logo.png" />
         <div style="align-self: stretch; height: 160px; position: relative"></div>
         <div class="subtitle subtitle-small">A THIRD VOYAGE TO THE FROZEN SHORES</div>
