@@ -10,41 +10,41 @@
             src: url('Galley.ttf') format('truetype');
             font-weight: 500;
         }
-        
+
         @font-face {
             font-family: 'Caslon Antique';
             src: url('CaslonAntique.ttf') format('truetype');
             font-weight: 400;
             font-style: normal;
         }
-        
+
         @font-face {
             font-family: 'Caslon Antique';
             src: url('CaslonAntique-Bold.ttf') format('truetype');
             font-weight: 700;
             font-style: normal;
         }
-        
+
         @font-face {
             font-family: 'Caslon Antique';
             src: url('CaslonAntique-Italic.ttf') format('truetype');
             font-weight: 400;
             font-style: italic;
         }
-        
+
         @font-face {
             font-family: 'Caslon Antique';
             src: url('CaslonAntique-BoldItalic.ttf') format('truetype');
             font-weight: 700;
             font-style: italic;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             margin: 0;
             padding: 0;
@@ -57,9 +57,181 @@
             transform-origin: top left;
         }
 
+        .main-container {
+            width: 2000px;
+            height: 6700px;
+            position: relative;
+            overflow: hidden;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            display: inline-flex;
+        }
+
+        .background-image {
+            width: 2092px;
+            height: 7000px;
+            left: -46px;
+            top: 0px;
+            position: absolute;
+            z-index: -1;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .spacer {
+            width: 1800px;
+            position: relative;
+        }
+
+        .logo {
+            width: 1022px;
+            height: 669px;
+        }
+
+        /* Subtitle styling */
+        .subtitle {
+            width: 1800px;
+            text-align: center;
+            color: #C7A144;
+            font-family: Galley;
+            font-weight: 500;
+            word-wrap: break-word;
+            text-shadow: 0px 4px 50px rgba(0, 0, 0, 1.00);
+        }
+
+        .subtitle-small {
+            font-size: 75px;
+        }
+
+        .subtitle-large {
+            font-size: 119px;
+        }
+
+        .subtitle-large .superscript {
+            font-size: 0.88em;
+            vertical-align: super;
+        }
+
+        .subtitle-year {
+            letter-spacing: -0.12em; /* 2026 letter spacing - edit this value */
+        }
+
+        /* Body text */
+        .body-text {
+            width: 1800px;
+            color: #C7A144;
+            font-family: 'Caslon Antique', serif;
+            font-style: italic;
+            font-size: 68px;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        .body-text-bold {
+            font-weight: 700;
+        }
+
+        .body-text-label {
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .body-text-underline {
+            text-decoration: underline;
+        }
+
+        /* Bullet list */
+        .bullet-list {
+            width: 1800px;
+            color: #C7A144;
+            font-family: 'Caslon Antique', serif;
+            font-style: italic;
+            font-size: 68px;
+            font-weight: 400;
+        }
+
+        .bullet-item {
+            display: block;
+            margin-bottom: 10px;
+            padding-left: 60px;
+            text-indent: -60px;
+        }
+
+        .bullet-item::before {
+            content: '•';
+            display: inline-block;
+            width: 60px;
+            text-indent: 0;
+        }
+
+        /* Time section */
+        .time-section {
+            width: 1800px;
+            color: #C7A144;
+            font-family: 'Caslon Antique', serif;
+            font-style: italic;
+            font-size: 68px;
+            font-weight: 400;
+        }
+
+        .time-row {
+            margin-bottom: 10px;
+        }
+
+        .time-label {
+            font-weight: 700;
+            font-style: normal;
+            letter-spacing: 3.40px;
+        }
+
+        .time-label-small {
+            font-size: 51px;
+            font-weight: 700;
+            font-style: normal;
+            letter-spacing: 2.55px;
+        }
+
+        /* Info section */
+        .info-section {
+            width: 1800px;
+            color: #C7A144;
+            font-family: 'Caslon Antique', serif;
+            font-style: italic;
+            font-size: 68px;
+            font-weight: 400;
+        }
+
+        .info-row {
+            margin-bottom: 40px;
+        }
+
+        .info-label {
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        /* RSVP Section */
+        .rsvp-container {
+            width: 1600px;
+            background: rgba(13, 10, 8, 0.85);
+            border-radius: 20px;
+            padding: 80px 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .rsvp-title {
+            color: #C7A144;
+            font-size: 128px;
+            font-family: Galley;
+            font-weight: 500;
+            margin-bottom: 40px;
+        }
+
         .rsvp-form {
-            width: 1500px;
-            margin-top: 60px;
+            width: 100%;
         }
 
         .rsvp-form input,
@@ -199,123 +371,19 @@
             margin-bottom: 40px;
         }
 
-        /* Subtitle scaling */
-        .subtitle {
-            width: 1900px;
-            text-align: center;
-            color: #C7A144;
-            font-family: Galley;
-            font-weight: 500;
-            word-wrap: break-word;
-            text-shadow: 0px 4px 50px rgba(0, 0, 0, 1.00);
-            white-space: nowrap;
-            letter-spacing: -0.04em;
-        }
-
-        .subtitle-small {
-            font-size: 75px;
-        }
-
-        .subtitle-large {
-            font-size: 119px;
-        }
-
-        .subtitle-large .superscript {
-            font-size: 0.88em;
-            vertical-align: super;
-        }
-
-        .subtitle-year {
-            letter-spacing: -0.12em; /* 2026 letter spacing - edit this value */
-        }
-
-        /* Body text */
-        .body-text {
-            width: 1900px;
-            color: #C7A144;
-            font-family: 'Caslon Antique', serif;
-            font-style: italic;
-            word-wrap: break-word;
-        }
-
-        .body-text-regular {
-            font-size: 68px;
-            font-weight: 400;
-        }
-
-        .body-text-bold {
-            font-size: 71px;
-            font-weight: 700;
-        }
-
-        .body-text-label {
-            font-size: 68px;
-            font-weight: 700;
-            font-style: normal;
-        }
-
-        .body-text-time {
-            font-size: 68px;
-            font-weight: 700;
-            font-style: normal;
-            letter-spacing: 3.40px;
-        }
-
-        .body-text-time-small {
-            font-size: 51px;
-            font-weight: 700;
-            font-style: normal;
-            letter-spacing: 2.55px;
-        }
-
-        .body-text-underline {
-            text-decoration: underline;
-        }
-
-        .body-text-list {
-            width: 1900px;
-            padding-left: 60px;
-        }
-
-        .body-text-list-item::before {
-            content: '';
-            display: inline-block;
-            width: 0.25em;
-            height: 0.25em;
-            background: #C7A144;
-            border-radius: 50%;
-            margin-right: 25px;
-            vertical-align: 0.2em;
-        }
-
-        /* Spacer above logo */
-        .logo-spacer {
-            align-self: stretch;
-            height: 1600px;
-            position: relative;
-        }
-
         /* Larger text on mobile */
         @media (max-width: 600px) {
-            .body-text-regular {
+            .body-text,
+            .bullet-list,
+            .time-section,
+            .info-section {
                 font-size: 85px;
             }
 
-            .body-text-bold {
-                font-size: 88px;
-            }
-
-            .body-text-label {
-                font-size: 85px;
-            }
-
-            .body-text-time {
-                font-size: 85px;
-            }
-
-            .body-text-time-small {
+            .time-label-small {
                 font-size: 64px;
             }
+
             .rsvp-form input,
             .rsvp-form textarea {
                 font-size: 85px;
@@ -348,41 +416,85 @@
 </head>
 <body>
     <div class="scale-wrapper" id="scaleWrapper">
-    <div style="width: 2000px; height: 6700px; position: relative; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
-        <img style="width: 2092px; height: 7000px; left: -46px; top: 0px; position: absolute; z-index: -1; object-fit: cover; object-position: top" src="background.jpg" />
-        <div style="align-self: stretch; height: 1600px; position: relative"></div>
-        <img style="width: 1022px; height: 669px" src="logo.png" />
-        <div style="align-self: stretch; height: 160px; position: relative"></div>
+    <div class="main-container">
+        <img class="background-image" src="background.jpg" />
+
+        <!-- Spacer above logo -->
+        <div class="spacer" style="height: 1600px;"></div>
+
+        <!-- Logo -->
+        <img class="logo" src="logo.png" />
+
+        <div class="spacer" style="height: 160px;"></div>
+
+        <!-- Subtitles -->
         <div class="subtitle subtitle-small">A THIRD VOYAGE TO THE FROZEN SHORES</div>
-        <div style="align-self: stretch; height: 40px; position: relative"></div>
+
+        <div class="spacer" style="height: 40px;"></div>
+
         <div class="subtitle subtitle-large">SATURDAY, MARCH 7<span class="superscript">th</span> <span class="subtitle-year">2026</span></div>
-        <div style="align-self: stretch; height: 120px; position: relative"></div>
-        <div style="align-self: stretch" class="body-text"><span class="body-text-bold">The icy waters of New England beckon once again for Baker Oyster III. <br/></span><span class="body-text-regular">Join us for an evening of maritime merriment and mixed martial arts mayhem.<br/><br/>You are welcome to bring friends, as we will be serving:</span></div>
-        <div style="align-self: stretch; height: 50px; position: relative"></div>
-        <div class="body-text body-text-regular body-text-list"><span class="body-text-list-item">Fresh oysters from </span><span class="body-text-bold">Island Creek Oysters</span><span> in Duxbury, MA, along with a variety of accoutrements<br/></span><span class="body-text-list-item">Other delicacies from the briny deep, including shrimp, caviar, and tinned fish<br/></span><span class="body-text-list-item">Specially selected beer and wine pairings<br/></span><span class="body-text-list-item">Admiralty-strength cocktails from the Baker Street Tiki Lab</span></div>
-        <div style="align-self: stretch; height: 50px; position: relative"></div>
-        <div class="body-text body-text-regular"><span class="body-text-time">7</span><span class="body-text-time-small">PM</span><span class="body-text-label"> </span><span>to</span><span class="body-text-label"> </span><span class="body-text-time">9</span><span class="body-text-time-small">PM</span><span class="body-text-label">:</span><span>  Oysters & Cocktails   </span><span class="body-text-time">9</span><span class="body-text-time-small">PM</span><span class="body-text-label"> </span><span>to</span><span class="body-text-label"> </span><span class="body-text-time">1</span><span class="body-text-time-small">AM</span><span class="body-text-label">:</span><span>  </span><span class="body-text-underline">UFC 326: Holloway vs. Oliviera 2</span><span> <br/><br/></span><span class="body-text-label">ADDRESS:</span><span> 7301 Baker St. • Pittsburgh, PA<br/><br/></span><span class="body-text-label">ATTIRE:</span><span> Just a lil' fancy.<br/><br/></span><span class="body-text-label">NOTE:</span><span> In lieu of bringing any additional food or beverages, we are </span><span class="body-text-underline">passing the digital hat</span><span> to help offset costs.</span></div>
-        <div style="align-self: stretch; height: 200px; position: relative"></div>
-        <div style="color: #C7A144; font-size: 128px; font-family: Galley; font-weight: 500; word-wrap: break-word">RSVP</div>
 
-        <form class="rsvp-form" id="rsvpForm">
-            <div class="form-label">WILL YOU BE JOINING US?</div>
-            <div class="radio-group">
-                <label><input type="radio" name="attending" value="Yes" required> Yes</label>
-                <label><input type="radio" name="attending" value="No" required> No</label>
-            </div>
-            <div class="form-row">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="number" name="guests" placeholder="# of Guests" min="1" max="10" class="small" required>
-            </div>
-            <textarea name="message" placeholder="Any dietary restrictions or notes? (optional)"></textarea>
-            <div style="text-align: center;">
-                <button type="submit">Submit RSVP</button>
-            </div>
-            <div id="formMessage"></div>
-        </form>
+        <div class="spacer" style="height: 120px;"></div>
 
-        <div style="align-self: stretch; height: 200px; position: relative"></div>
+        <!-- Intro text -->
+        <div class="body-text">
+            <span class="body-text-bold">The icy waters of New England beckon once again for Baker Oyster III.</span><br/>
+            Join us for an evening of maritime merriment and mixed martial arts mayhem.<br/><br/>
+            You are welcome to bring friends, as we will be serving:
+        </div>
+
+        <div class="spacer" style="height: 50px;"></div>
+
+        <!-- Bullet list -->
+        <div class="bullet-list">
+            <div class="bullet-item">Fresh oysters from <span class="body-text-bold">Island Creek Oysters</span> in Duxbury, MA, along with a variety of accoutrements</div>
+            <div class="bullet-item">Other delicacies from the briny deep, including shrimp, caviar, and tinned fish</div>
+            <div class="bullet-item">Specially selected beer and wine pairings</div>
+            <div class="bullet-item">Admiralty-strength cocktails from the Baker Street Tiki Lab</div>
+        </div>
+
+        <div class="spacer" style="height: 50px;"></div>
+
+        <!-- Time section -->
+        <div class="time-section">
+            <div class="time-row"><span class="time-label">7</span><span class="time-label-small">PM</span> to <span class="time-label">9</span><span class="time-label-small">PM</span>:  Oysters & Cocktails</div>
+            <div class="time-row"><span class="time-label">9</span><span class="time-label-small">PM</span> to <span class="time-label">1</span><span class="time-label-small">AM</span>:  <span class="body-text-underline">UFC 326: Holloway vs. Oliviera 2</span></div>
+        </div>
+
+        <div class="spacer" style="height: 50px;"></div>
+
+        <!-- Info section -->
+        <div class="info-section">
+            <div class="info-row"><span class="info-label">ADDRESS:</span> 7301 Baker St. • Pittsburgh, PA</div>
+            <div class="info-row"><span class="info-label">ATTIRE:</span> Just a lil' fancy.</div>
+            <div class="info-row"><span class="info-label">NOTE:</span> In lieu of bringing any additional food or beverages, we are <span class="body-text-underline">passing the digital hat</span> to help offset costs.</div>
+        </div>
+
+        <div class="spacer" style="height: 100px;"></div>
+
+        <!-- RSVP Section -->
+        <div class="rsvp-container">
+            <div class="rsvp-title">RSVP</div>
+
+            <form class="rsvp-form" id="rsvpForm">
+                <div class="form-label">WILL YOU BE JOINING US?</div>
+                <div class="radio-group">
+                    <label><input type="radio" name="attending" value="Yes" required> Yes</label>
+                    <label><input type="radio" name="attending" value="No" required> No</label>
+                </div>
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="number" name="guests" placeholder="# of Guests" min="1" max="10" class="small" required>
+                </div>
+                <textarea name="message" placeholder="Any dietary restrictions or notes? (optional)"></textarea>
+                <div style="text-align: center;">
+                    <button type="submit">Submit RSVP</button>
+                </div>
+                <div id="formMessage"></div>
+            </form>
+        </div>
+
+        <div class="spacer" style="height: 200px;"></div>
     </div>
     </div>
     <script>
@@ -400,26 +512,21 @@
             wrapper.style.marginLeft = Math.max(0, leftOffset) + 'px';
         }
 
-        // Scale subtitles to fit container width
-        function scaleSubtitles() {
-            var containerWidth = 1800; // 2000px - 200px padding
-            var subtitles = document.querySelectorAll('.subtitle');
-            subtitles.forEach(function(el) {
-                // Reset to base size first
+        scaleContent();
+        window.addEventListener('resize', scaleContent);
+
+        // Scale subtitles to fill 1800px width
+        function scaleSubtitlesToFit() {
+            var targetWidth = 1800;
+            document.querySelectorAll('.subtitle').forEach(function(el) {
                 var baseSize = el.classList.contains('subtitle-large') ? 119 : 75;
                 el.style.fontSize = baseSize + 'px';
-                // Measure and scale if needed
-                var textWidth = el.scrollWidth;
-                if (textWidth > containerWidth) {
-                    var newSize = Math.floor(baseSize * (containerWidth / textWidth));
-                    el.style.fontSize = newSize + 'px';
-                }
+                var scale = targetWidth / el.scrollWidth;
+                el.style.fontSize = Math.floor(baseSize * scale) + 'px';
             });
         }
 
-        scaleContent();
-        scaleSubtitles();
-        window.addEventListener('resize', scaleContent);
+        scaleSubtitlesToFit();
 
         // Form submission
         document.getElementById('rsvpForm').addEventListener('submit', function(e) {
@@ -431,7 +538,7 @@
 
             // Collect form data
             var attendingRadio = form.querySelector('input[name="attending"]:checked');
-            
+
             // Validate attending field
             if (!attendingRadio) {
                 messageDiv.textContent = 'Please select Yes or No for attendance.';
@@ -446,7 +553,7 @@
 
             console.log('Attending radio selected:', attendingRadio);
             console.log('Attending value:', attendingRadio.value);
-            
+
             var formData = {
                 timestamp: new Date().toISOString(),
                 name: form.querySelector('input[name="name"]').value,
@@ -454,7 +561,7 @@
                 guests: form.querySelector('input[name="guests"]').value,
                 message: form.querySelector('textarea[name="message"]').value
             };
-            
+
             console.log('Form data being sent:', formData);
 
             // REPLACE THIS URL with your Google Apps Script Web App URL
