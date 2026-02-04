@@ -281,11 +281,15 @@
             background: #C7A144;
             border-radius: 50%;
             margin-right: 25px;
-            vertical-align: 0.35em;
+            vertical-align: 0.2em;
         }
 
         /* Larger text on mobile */
         @media (max-width: 600px) {
+            .scale-wrapper {
+                padding-top: 100px; /* Mobile top padding - edit this value */
+            }
+
             .body-text-regular {
                 font-size: 85px;
             }
